@@ -7,11 +7,12 @@ $password = "TRXCCmmls";
 try
      {
     $conn = new PDO("mysql:host=$servername;dbname=pbs29",$username, $password);
-     echo "Connected successfully"; 
+     echo "<b><i>Connected Successfully</i> </b> <br>"; 
       }
+
  catch(PDOException $e)
       {
-      echo "Connection failed: " . $e->getMessage();
+      echo "<b><i>Connection Failed</i></b> <br>";
         }
 	
 
@@ -20,9 +21,3 @@ try
 
 
 
-
-
-
-
-
-?>
