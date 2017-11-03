@@ -4,12 +4,15 @@ $servername = "sql1.njit.edu";
 $username = "pbs29";
 $password = "TRXCCmmls";
 
-try
-  {
+if (isset($_POST["submit"]))
+{
+  try
+    {
 
-$data_bank = new PDO("mysql:host=$servername;dbname=pbs29",$username,$password); echo "<b><i>Connected Successfully</i> </b> <br>"; 
+$data_bank = new PDO("mysql:host=$servername;dbname=pbs29",$username,$password);
+echo "<b><i>Connected Successfully</i> </b> <br>"; 
    
-   }
+     }
 
 catch(PDOException $e)
     {
@@ -45,11 +48,12 @@ if
        
         echo"</table>";
 	$data_bank =NULL;
-	
-          
+
+
+   }       
         else
 	 { 
-	    echo "<h3>Connect to Display Users having Id less than 6</h3>";
+	    echo "<h1>Connect to Display Users having Id less than 6</h1>";
 	    echo "<form method=\"post\"enctype=\"multipart/form-data\">";
 	    echo "<input type=\"submit\"value=\"Connect!\" name=\"submit\">";
 	    echo "</form>";
