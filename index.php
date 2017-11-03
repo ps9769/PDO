@@ -36,9 +36,24 @@ if
 	       <th>Password</th>
 	       </tr>";
 
-	       }
-	       else
-	       {
+      foreach ($result as $row)
+       {
+         echo "<tr><td>".$row['id']."</td><td>".$row['email']."</td><td>".$row['fname']."</td><td>".$row['lname']."</td><td>".$row['phone']."</td><td>".$row['birthday']."</td><td>".$row['gender']."</td><td>".$row['password']."</td></tr>";
+	 
+	 }
+      }
+       
+        echo"</table>";
+	$data_bank =NULL;
+	
+          
+        else
+	 { 
+	    echo "<h3>Connect to Display Users having Id less than 6</h3>";
+	    echo "<form method=\"post\"enctype=\"multipart/form-data\">";
+	    echo "<input type=\"submit\"value=\"Connect!\" name=\"submit\">";
+	    echo "</form>";
+	         
 	       }
 
 
