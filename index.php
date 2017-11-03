@@ -12,8 +12,8 @@ try
 
  catch(PDOException $e)
       {
-      echo "<b><i>Connection Failed</i></b> <br>";
-        }
+      echo "<b><i>Connection Failed</i></b>  <br>";
+       }
 	
 
 ?>
